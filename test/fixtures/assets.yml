@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  asset_type: 1
+  user: 
+  value: 1
+
+two:
+  asset_type: 1
+  user: 
+  value: 1

@@ -1,0 +1,18 @@
+<%= form_for @user, :url => wizard_path do |f| %>
+
+	<%= f.fields_for :assets, f.object.assets.first_type do |ff| %>
+    <%= ff.label :value, 'Asset value:' %>
+    <%= ff.text_field :value %>
+  <% end %>
+
+  <%= f.fields_for :assets, f.object.assets.second_type do |ff| %>
+    <%= ff.label :value, 'Asset value:' %>
+  <% end %>
+
+  <%= f.fields_for :assets, f.object.assets.third_type do |ff| %>
+    <%= ff.label :value, 'Asset value:' %>
+  <% end %>
+
+  <%= f.submit %>
+
+<% end %>
