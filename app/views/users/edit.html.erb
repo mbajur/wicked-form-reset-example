@@ -1,17 +1,43 @@
-<%= form_for @user, :url => wizard_path do |f| %>
+<%= notice %>
+
+<%= form_for @user do |f| %>
+
+  <% @user.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+
+  <h3>User</h3>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <hr>
+
+  <h3>Assets</h3>
 
 	<%= f.fields_for :assets, f.object.assets.first_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
+    <br>
     <%= ff.text_field :value %>
   <% end %>
 
+  <br><br>
+
   <%= f.fields_for :assets, f.object.assets.second_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
+    <br>
+    <%= ff.text_field :value %>
   <% end %>
+
+  <br><br>
 
   <%= f.fields_for :assets, f.object.assets.third_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
+    <br>
+    <%= ff.text_field :value %>
   <% end %>
+
+  <hr>
 
   <%= f.submit %>
 
