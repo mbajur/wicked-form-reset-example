@@ -1,6 +1,6 @@
 <%= notice %>
 
-<%= form_for @user do |f| %>
+<%= nested_form_for @user do |f| %>
 
   <% @user.errors.full_messages.each do |msg| %>
       <p><%= msg %></p>
@@ -22,6 +22,7 @@
     <br>
     <%= ff.text_field :value %>
   <% end %>
+  <p><%= f.link_to_add "Add asset of type 1", :assets %></p>
 
   <br><br>
 
@@ -32,6 +33,7 @@
     <br>
     <%= ff.text_field :value %>
   <% end %>
+  <p><%= f.link_to_add "Add asset of type 2", :assets %></p>
 
   <br><br>
 
@@ -42,6 +44,7 @@
     <br>
     <%= ff.text_field :value %>
   <% end %>
+  <p><%= f.link_to_add "Add asset of type 3", :assets %></p>
 
   <hr>
 

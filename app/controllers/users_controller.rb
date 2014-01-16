@@ -1,4 +1,5 @@
 class UsersController < ActionController::Base
+  layout 'application'
   def edit
     @user = User.find(params[:id])
   end
