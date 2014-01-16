@@ -15,7 +15,7 @@
 
   <h3>Assets</h3>
 
-	<%= f.fields_for :assets, f.object.assets.first_type do |ff| %>
+	<%= f.fields_for :assets, @user.first_type do |ff| %>
     <%= ff.hidden_field :asset_type %>
 
     <%= ff.label :value, 'Asset value:' %>
@@ -25,7 +25,7 @@
 
   <br><br>
 
-  <%= f.fields_for :assets, f.object.assets.second_type do |ff| %>
+  <%= f.fields_for :assets, @user.second_type do |ff| %>
     <%= ff.hidden_field :asset_type %>
 
     <%= ff.label :value, 'Asset value:' %>
@@ -35,7 +35,7 @@
 
   <br><br>
 
-  <%= f.fields_for :assets, f.object.assets.third_type do |ff| %>
+  <%= f.fields_for :assets, @user.third_type do |ff| %>
     <%= ff.hidden_field :asset_type %>
 
     <%= ff.label :value, 'Asset value:' %>
