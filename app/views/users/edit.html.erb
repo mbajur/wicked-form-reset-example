@@ -15,36 +15,30 @@
 
   <h3>Assets</h3>
 
-	<%= f.fields_for :assets, @user.first_type do |ff| %>
-    <%= ff.hidden_field :asset_type %>
-
+	<%= f.fields_for :assets_first_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
     <br>
     <%= ff.text_field :value %>
   <% end %>
-  <p><%= f.link_to_add "Add asset of type 1", :assets %></p>
+  <p><%= f.link_to_add "Add asset of type 1", :assets_first_type %></p>
 
   <br><br>
 
-  <%= f.fields_for :assets, @user.second_type do |ff| %>
-    <%= ff.hidden_field :asset_type %>
-
+  <%= f.fields_for :assets_second_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
     <br>
     <%= ff.text_field :value %>
   <% end %>
-  <p><%= f.link_to_add "Add asset of type 2", :assets %></p>
+  <p><%= f.link_to_add "Add asset of type 2", :assets_second_type %></p>
 
   <br><br>
 
-  <%= f.fields_for :assets, @user.third_type do |ff| %>
-    <%= ff.hidden_field :asset_type %>
-
+  <%= f.fields_for :assets_third_type do |ff| %>
     <%= ff.label :value, 'Asset value:' %>
     <br>
     <%= ff.text_field :value %>
   <% end %>
-  <p><%= f.link_to_add "Add asset of type 3", :assets %></p>
+  <p><%= f.link_to_add "Add asset of type 3", :assets_third_type %></p>
 
   <hr>
 
